@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<GridPane xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.gui.hotel_management_javafx.MainWindowController">
+   <columnConstraints>
+      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+   </columnConstraints>
+   <rowConstraints>
+      <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+   </rowConstraints>
+   <children>
+      <HBox>
+         <children>
+            <MenuBar fx:id="menuBar" prefWidth="600.0" HBox.hgrow="ALWAYS">
+              <menus>
+                <Menu mnemonicParsing="false" text="Manage &gt;">
+                  <items>
+                    <MenuItem fx:id="clients" mnemonicParsing="false" onAction="#manageClients" text="Clients" />
+                        <SeparatorMenuItem mnemonicParsing="false" />
+                        <MenuItem fx:id="rooms" mnemonicParsing="false" onAction="#manageRooms" text="Rooms" />
+                        <SeparatorMenuItem mnemonicParsing="false" />
+                        <MenuItem fx:id="reservations" mnemonicParsing="false" onAction="#manageReservations" text="Reservations" />
+                  </items>
+                </Menu>
+              </menus>
+            </MenuBar>
+         </children>
+      </HBox>
+   </children>
+</GridPane>
