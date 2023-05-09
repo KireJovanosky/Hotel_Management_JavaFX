@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="286.0" prefWidth="291.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.gui.hotel_management_javafx.RoomTypesWindowController">
+   <children>
+      <TableView fx:id="roomTypesTable" layoutX="8.0" layoutY="6.0" prefHeight="278.0" prefWidth="284.0">
+        <columns>
+          <TableColumn fx:id="typeIdCol" prefWidth="75.0" text="ID" />
+          <TableColumn fx:id="labelCol" prefWidth="110.0" text="Label" />
+            <TableColumn fx:id="priceCol" prefWidth="98.0" text="Price" />
+        </columns>
+      </TableView>
+   </children>
+</AnchorPane>

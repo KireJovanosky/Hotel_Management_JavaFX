@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="431.0" prefWidth="786.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.gui.hotel_management_javafx.ReservationsWindowController">
+   <children>
+      <Label alignment="TOP_CENTER" layoutX="247.0" layoutY="25.0" text="Manage Reservations" textAlignment="CENTER">
+         <font>
+            <Font size="31.0" />
+         </font>
+      </Label>
+      <TableView fx:id="reservationsTable" layoutX="349.0" layoutY="99.0" onMouseClicked="#onSelect" prefHeight="272.0" prefWidth="426.0">
+        <columns>
+          <TableColumn fx:id="reservationIdCol" prefWidth="33.0" text="ID" />
+          <TableColumn fx:id="resClientIdCol" prefWidth="98.0" text="Client ID" />
+            <TableColumn fx:id="resRoomNumberCol" prefWidth="104.0" text="Room Number" />
+            <TableColumn fx:id="dateInCol" prefWidth="95.0" text="Date In" />
+            <TableColumn fx:id="dateOutCol" prefWidth="95.0" text="Date Out" />
+        </columns>
+      </TableView>
+      <Label layoutX="83.0" layoutY="105.0" text="ID:" />
+      <Label layoutX="49.0" layoutY="150.0" text="Client ID:" />
+      <Label layoutX="16.0" layoutY="196.0" text="Room Number:" />
+      <Label layoutX="53.0" layoutY="241.0" text="Date In:" />
+      <Label layoutX="43.0" layoutY="280.0" text="Date Out:" />
+      <TextField fx:id="textFieldReservationID" editable="false" layoutX="106.0" layoutY="101.0" prefHeight="25.0" prefWidth="207.0" />
+      <TextField fx:id="textFieldClientID" layoutX="106.0" layoutY="146.0" prefHeight="25.0" prefWidth="207.0" />
+      <TextField fx:id="textFieldRoomNumber" layoutX="106.0" layoutY="192.0" prefHeight="25.0" prefWidth="207.0" />
+      <Button fx:id="addReservationButton" layoutX="15.0" layoutY="347.0" mnemonicParsing="false" onAction="#addReservationButtonAction" prefHeight="25.0" prefWidth="109.0" text="Add Reservation" />
+      <Button fx:id="editReservationButton" layoutX="136.0" layoutY="347.0" mnemonicParsing="false" onAction="#editReservationButtonAction" prefHeight="25.0" prefWidth="82.0" text="Edit" />
+      <Button fx:id="removeReservationButton" layoutX="231.0" layoutY="347.0" mnemonicParsing="false" onAction="#removeReservationButtonAction" prefHeight="25.0" prefWidth="82.0" text="Remove" />
+      <Button fx:id="clearFieldsButton" layoutX="16.0" layoutY="382.0" mnemonicParsing="false" onAction="#clearReservationAction" prefHeight="25.0" prefWidth="297.0" text="Clear Fields" />
+      <Button fx:id="refreshButton" layoutX="348.0" layoutY="382.0" mnemonicParsing="false" onAction="#refreshButtonAction" prefHeight="25.0" prefWidth="426.0" text="Refresh" />
+      <DatePicker fx:id="datePickerDateIn" layoutX="106.0" layoutY="237.0" prefHeight="25.0" prefWidth="207.0" />
+      <DatePicker fx:id="datePickerDateOut" layoutX="106.0" layoutY="276.0" prefHeight="25.0" prefWidth="207.0" />
+   </children>
+</AnchorPane>

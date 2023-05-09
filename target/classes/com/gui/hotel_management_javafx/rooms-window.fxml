@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="416.0" prefWidth="783.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.gui.hotel_management_javafx.RoomsWindowController">
+    <children>
+        <Label alignment="TOP_CENTER" layoutX="284.0" layoutY="30.0" text="Manage rooms" textAlignment="CENTER">
+         <font>
+            <Font size="31.0" />
+         </font></Label>
+        <TableView fx:id="roomTable" layoutX="349.0" layoutY="99.0" onMouseClicked="#onSelect" prefHeight="272.0" prefWidth="426.0">
+            <columns>
+                <TableColumn fx:id="roomNumberCol" prefWidth="77.0" text="Number" />
+                <TableColumn fx:id="roomTypeCol" minWidth="0.0" prefWidth="93.0" text="Type" />
+                <TableColumn fx:id="roomPhoneCol" minWidth="0.0" prefWidth="103.0" text="Phone" />
+            <TableColumn fx:id="reservation" maxWidth="329.0" prefWidth="152.0" text="Reserved" />
+            </columns>
+        </TableView>
+        <Label layoutX="46.0" layoutY="105.0" text="Number:" />
+        <Label layoutX="64.0" layoutY="150.0" text="Type:" />
+        <Label layoutX="9.0" layoutY="195.0" text="Phone Number:" />
+        <TextField fx:id="textFieldRoomNumber" layoutX="106.0" layoutY="101.0" prefHeight="25.0" prefWidth="207.0" />
+        <TextField fx:id="textFieldRoomPhoneNumber" layoutX="106.0" layoutY="191.0" prefHeight="25.0" prefWidth="207.0" />
+        <Button fx:id="addClientButton" layoutX="15.0" layoutY="347.0" mnemonicParsing="false" onAction="#addNewRoomButtonAction" prefHeight="25.0" prefWidth="98.0" text="Add Room" />
+        <Button fx:id="editClientButton" layoutX="126.0" layoutY="347.0" mnemonicParsing="false" onAction="#editRoomButtonAction" prefHeight="25.0" prefWidth="77.0" text="Edit" />
+        <Button fx:id="removeClientButton" layoutX="215.0" layoutY="347.0" mnemonicParsing="false" onAction="#removeRoomButtonAction" prefHeight="25.0" prefWidth="98.0" text="Remove" />
+        <Button fx:id="clearFieldsButton" layoutX="16.0" layoutY="382.0" mnemonicParsing="false" onAction="#clearButtonAction" prefHeight="25.0" prefWidth="297.0" text="Clear Fields" />
+        <Button fx:id="refreshButton" layoutX="348.0" layoutY="382.0" mnemonicParsing="false" onAction="#refreshButtonAction" prefHeight="25.0" prefWidth="426.0" text="Refresh" />
+      <ComboBox fx:id="comboBoxRoomType" layoutX="106.0" layoutY="146.0" prefHeight="25.0" prefWidth="98.0" />
+      <Button fx:id="showTypesButtonAction" layoutX="215.0" layoutY="146.0" mnemonicParsing="false" onAction="#showRoomTypesTable" prefHeight="25.0" prefWidth="98.0" text="Show Types" />
+      <RadioButton fx:id="radioButtonYes" layoutX="106.0" layoutY="235.0" mnemonicParsing="false" text="YES" />
+      <RadioButton fx:id="radioButtonNo" layoutX="215.0" layoutY="235.0" mnemonicParsing="false" text="NO" />
+      <Label layoutX="44.0" layoutY="235.0" text="Reserved:" />
+    </children>
+</AnchorPane>
